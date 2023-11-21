@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-BuglistApplication<buglist>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.buglistemail.buglist.BuglistApplication",
+            "projectName": "buglist",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

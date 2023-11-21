@@ -8,19 +8,19 @@ import java.util.List;
 public class BugEmailScheduler {
 
     private final BugRepository bugRepository;
-    private final EmailService emailService;
+    // private final EmailService emailService;
 
-    public BugEmailScheduler(BugRepository bugRepository, EmailService emailService) {
+    public BugEmailScheduler(BugRepository bugRepository) {
         this.bugRepository = bugRepository;
-        this.emailService = emailService;
+        // this.emailService = emailService;
     }
 
     public void sendBugStatusEmailsOnce() {
         List<Bug> openBugs = bugRepository.findByStatusNotIgnoreCase("Closed");
 
-        for (Bug bug : openBugs) {
-            String emailText = "Bug ID: " + bug.getBugId() + "\nSummary: " + bug.getSummary();
-            emailService.sendSimpleMessage("aiman.alias@beans.com.my", "Open Bug Alert Notified!", emailText);
-        }
+        // for (Bug bug : openBugs) {
+        //     String emailText = "Bug ID: " + bug.getBugId() + "\nSummary: " + bug.getSummary();
+        //     emailService.sendSimpleMessage("aiman.alias@beans.com.my", "Open Bug Alert Notified!", emailText);
+        // }
     }
 }
